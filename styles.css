@@ -1,0 +1,483 @@
+/* WCWIF Conference — Santa Clara University branding
+   Colors: https://www.scu.edu/umc/brand/ | Primary: SCU Red #B30738, Black #000000 */
+:root {
+  --color-bg: #f5f5f5;
+  --color-surface: #fff;
+  --color-text: #000000;
+  --color-text-muted: #333;
+  --color-accent: #B30738;
+  --color-accent-hover: #8f062c;
+  --color-border: #ddd;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --radius: 6px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.logo:hover {
+  color: var(--color-accent-hover);
+}
+
+.main-nav {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.main-nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: var(--space-xs) 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+}
+
+@media (max-width: 700px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-surface);
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+/* Hero — SCU red */
+.hero {
+  padding: var(--space-xl) 0;
+  text-align: center;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.hero-sponsor {
+  font-size: 0.95rem;
+  margin: 0 0 var(--space-sm);
+  opacity: 0.95;
+}
+
+.hero-sponsor a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero-sponsor a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin: 0 0 var(--space-xs);
+  letter-spacing: 0.05em;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0 0 var(--space-sm);
+}
+
+.hero-date {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+/* Sections */
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section:nth-child(even) {
+  background: var(--color-surface);
+}
+
+.section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 var(--space-sm);
+}
+
+.section-intro {
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-lg);
+  max-width: 60ch;
+}
+
+/* Agenda */
+.agenda-content {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.agenda-day {
+  background: var(--color-bg);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--color-accent);
+}
+
+.agenda-day h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text);
+}
+
+.session-block-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: var(--space-lg) 0 var(--space-xs);
+}
+
+.session-block-title:first-of-type {
+  margin-top: var(--space-md);
+}
+
+.session-chair {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-sm);
+  font-style: italic;
+}
+
+.agenda-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.agenda-list li {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agenda-list li:last-child {
+  border-bottom: none;
+}
+
+.agenda-list .time {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--color-accent);
+  min-width: 4ch;
+}
+
+.agenda-sponsor {
+  margin-top: var(--space-lg);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.agenda-sponsor a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.agenda-sponsor a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.agenda-note {
+  margin-top: var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.agenda-note a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.agenda-note a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Past agendas */
+.past-years {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.past-year-card {
+  background: var(--color-surface);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.past-year-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin: 0 0 var(--space-xs);
+  color: var(--color-accent);
+}
+
+.past-year-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.past-year-card a {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.past-year-card a:hover {
+  text-decoration: underline;
+}
+
+/* Venue */
+.venue-content {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .venue-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.venue-details h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text);
+}
+
+.venue-details p {
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+.venue-details a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.venue-details a:hover {
+  text-decoration: underline;
+}
+
+.venue-map-figure {
+  margin: 0;
+}
+
+.venue-map-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  min-height: 320px;
+  max-height: 480px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.venue-pdf {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: block;
+}
+
+.venue-map-figure figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.map-open-link {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.9rem;
+}
+
+.map-open-link a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.map-open-link a:hover {
+  text-decoration: underline;
+}
+
+/* Accommodation */
+.accommodation-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.accommodation-card {
+  background: var(--color-surface);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.accommodation-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin: 0 0 var(--space-xs);
+  color: var(--color-text);
+}
+
+.accommodation-card p {
+  margin: 0 0 var(--space-xs);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.accommodation-card a {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.accommodation-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer — SCU red */
+.site-footer {
+  padding: var(--space-lg) 0;
+  background: var(--color-accent);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-sponsor {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-sponsor a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-sponsor a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
