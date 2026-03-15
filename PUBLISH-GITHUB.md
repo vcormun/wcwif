@@ -14,7 +14,7 @@ Go to [github.com](https://github.com) and sign up.
 
 1. Click the **+** (top right) → **New repository**.
 2. **Repository name:** e.g. `wcwif` (lowercase, no spaces). This will be in the URL.
-3. **Public**, and leave “Add a README” **unchecked** (you already have files).
+3. **Public**, and leave "Add a README" **unchecked** (you already have files).
 4. Click **Create repository**.
 
 ---
@@ -42,27 +42,30 @@ git branch -M main
 # Add your GitHub repo as the remote (use YOUR repo URL from GitHub)
 git remote add origin https://github.com/YOUR-USERNAME/wcwif.git
 
-# Push to GitHub (you’ll be asked for your GitHub username and password/token)
+# Push to GitHub (you'll be asked for your GitHub username and password/token)
 git push -u origin main
 ```
 
-**Note:** If GitHub asks for a password, use a **Personal Access Token** instead of your account password. Create one: GitHub → **Settings** → **Developer settings** → **Personal access tokens** → **Tokens (classic)** → **Generate new token**. Give it “repo” scope and use it when the terminal asks for a password.
+**Note:** If GitHub asks for a password, use a **Personal Access Token** instead of your account password. Create one: GitHub → **Settings** → **Developer settings** → **Personal access tokens** → **Tokens (classic)** → **Generate new token**. Give it "repo" scope and use it when the terminal asks for a password.
 
 ---
 
-## 4. Turn on GitHub Pages
+## 4. Turn on GitHub Pages (required — site won’t show until you do this)
 
-1. On GitHub, open your repo (e.g. `https://github.com/YOUR-USERNAME/wcwif`).
-2. Click **Settings** → in the left sidebar, click **Pages** (under “Code and automation” or “Build and deployment”).
-3. Under **Source**, choose **Deploy from a branch**.
-4. Under **Branch**, select **main** and **/ (root)**.
-5. Click **Save**.
+1. On GitHub, open your repo: `https://github.com/YOUR-USERNAME/wcwif`
+2. Click **Settings** (tab at the top of the repo).
+3. In the left sidebar, click **Pages** (under "Code and automation" or "Build and deployment").
+4. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
+5. Under **Branch**, select your branch (use **main** if it’s there; if you only see something like `main-,folder/(root)`, select that and **/ (root)**).
+6. Click **Save**.
 
-After a minute or two, your site will be at:
+After 1–2 minutes, your site will be at:
 
 **https://YOUR-USERNAME.github.io/wcwif/**
 
-(If the repo name is `wcwif`; otherwise replace `wcwif` with your repo name.)
+(Replace YOUR-USERNAME and wcwif with your username and repo name.)
+
+If you still see 404, wait a few more minutes or check **Settings → Pages** for a message like “Your site is live at …”.
 
 ---
 
