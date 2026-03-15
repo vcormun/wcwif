@@ -286,6 +286,17 @@ body {
   color: inherit;
 }
 
+.paper-link {
+  font-size: 0.9em;
+  color: var(--color-accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.paper-link:hover {
+  text-decoration: underline;
+}
+
 .agenda-sponsor {
   margin-top: var(--space-lg);
   font-size: 1rem;
