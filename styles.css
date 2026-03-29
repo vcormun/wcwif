@@ -278,6 +278,10 @@ body {
   display: block;
 }
 
+.agenda-item-content .session strong {
+  font-weight: 700;
+}
+
 .agenda-discussant {
   margin: var(--space-xs) 0 0;
   font-size: inherit;
